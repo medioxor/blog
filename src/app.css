@@ -1,0 +1,110 @@
+:root {
+  --primary: #34c3b3;
+  --background: #1a1b1e;
+  --text: #e9ecef;
+  --card-bg: #2c2e33;
+  --accent: #e76f51;
+  --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+  --border-color: #373a40;
+  --hover-shadow: rgba(52, 195, 179, 0.2);
+  --text-muted: #868e96;
+  --gradient-1: #1a1b1e;
+  --gradient-2: #22252a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, var(--gradient-1), var(--gradient-2), var(--gradient-1));
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: var(--text);
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px var(--hover-shadow);
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.terminal-text {
+  font-family: var(--font-mono);
+  color: var(--primary);
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+code {
+  background-color: var(--background);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  border: 1px solid var(--border-color);
+}
