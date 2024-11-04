@@ -7,6 +7,14 @@
 </script>
 
 <header>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-476M8TN9LE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-476M8TN9LE');
+</script>
   <div class="container">
     <div class="header-content">
       <div class="title-section">
